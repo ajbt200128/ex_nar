@@ -8,7 +8,7 @@ defmodule ExNar.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
 
       # Hex
       description: "A simple Nix Archive Library for Elixir",
@@ -18,7 +18,6 @@ defmodule ExNar.MixProject do
       name: "ExNar",
       docs: docs()
     ]
-
   end
 
   def application do
@@ -28,8 +27,7 @@ defmodule ExNar.MixProject do
   end
 
   defp deps do
-    [
-    ]
+    []
   end
 
   defp package do
