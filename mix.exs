@@ -12,7 +12,7 @@ defmodule ExNar.MixProject do
 
       # Hex
       description: "A simple Nix Archive Library for Elixir",
-      paclage: package(),
+      package: package(),
 
       # Docs
       name: "ExNar",
