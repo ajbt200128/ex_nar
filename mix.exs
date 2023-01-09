@@ -27,7 +27,9 @@ defmodule ExNar.MixProject do
   end
 
   defp deps do
-    []
+    [
+       {:ex_doc, "~> 0.27", only: :dev, runtime: false}
+    ]
   end
 
   defp package do
@@ -40,7 +42,8 @@ defmodule ExNar.MixProject do
 
   defp docs do
     [
-      source_url: @source_url
+      source_url: @source_url,
+      extras: ["README.md"]
     ]
   end
 end
