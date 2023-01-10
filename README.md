@@ -10,9 +10,14 @@ An Elixir Library to create + unpack Nix Archives. Only directly serializes + de
 
 ``` elixir
 # Deserialize 
-Deserialize.deserialize! ("/path/to/.nar", "")
+ExNar.deserialize! ("/path/to/.nar", "")
 #=> :ok
-# Serialize.serialize!("/path/to/serialize")
+# Serialize
+ExNar.serialize!("/path/to/serialize")
+#=> <<13,0,0,0,...>>
+
+# Serialize byte stream
+ExNar.serialize!("hello world", :bytestream)
 #=> <<13,0,0,0,...>>
 ```
 
@@ -24,7 +29,7 @@ by adding `ex_nar` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:ex_nar, "~> 0.1.0"}
+    {:ex_nar, "~> 0.2.0"}
   ]
 end
 ```
