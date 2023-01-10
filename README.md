@@ -1,5 +1,9 @@
 # ExNar
 
+[![Hex.pm](https://img.shields.io/hexpm/v/ex_nar.svg)](https://hex.pm/packages/ex_nar) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/ex_nar/)
+
+---
+
 An Elixir Library to create + unpack Nix Archives. Only directly serializes + deserializes, with no intermediate state that can be inspected (PRs welcome :)).
 
 ## Usage
