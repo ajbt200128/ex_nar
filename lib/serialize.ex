@@ -49,7 +49,9 @@ defmodule Serialize do
     serialize_int(size) <> s
   end
 
-  # Serializes and archives a given path `fso`
+  @doc """
+  Serializes and archives a given path `fso`, returning a binary
+  """
   def serialize!(fso) when is_binary(fso) do
     type = File.lstat!(fso).type
     data = ["nix-archive-1", serialize_p(fso, type)] |> List.flatten()

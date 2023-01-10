@@ -5,7 +5,14 @@ defmodule Deserialize do
   @executable_perms 0o755
   @default_perms 0o644
 
+  @doc """
+  Get the default permissions used when deserializing
+  """
   def default_perms, do: @default_perms
+
+  @doc """
+  Get the executable permissions used when deserializing
+  """
   def executable_perms, do: @executable_perms
 
   defp size(n), do: :binary.decode_unsigned(n, :little)
@@ -36,7 +43,7 @@ defmodule Deserialize do
   defp parse_block(stream) do
     {size, stream} = read_block(8, stream)
 
-    if size == [] do
+    if size == "" do
       {"", stream}
     else
       read_block(size(size), stream)
