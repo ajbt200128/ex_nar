@@ -200,10 +200,10 @@ defmodule ExNar do
   end
 
   @doc """
-  Given a path to a Nix Archive `nar` unpack it to `output_path`
+  Given binary representing Nix Archive `nar` unpack it to `output_path`
   """
   def deserialize!(nar, output_path) when is_binary(nar) and is_binary(output_path) do
-    File.read!(nar)
+    nar
     |> :binary.bin_to_list()
     |> Enum.chunk_every(8)
     |> Enum.map(&:binary.list_to_bin/1)

@@ -10,7 +10,7 @@ An Elixir Library to create + unpack Nix Archives. Only directly serializes + de
 
 ``` elixir
 # Deserialize 
-ExNar.deserialize! ("/path/to/.nar", "")
+ExNar.deserialize! (File.read!("/path/to/.nar"), "")
 #=> :ok
 # Serialize
 ExNar.serialize!("/path/to/serialize")
